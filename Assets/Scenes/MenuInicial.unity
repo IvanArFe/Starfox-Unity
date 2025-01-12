@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &252042899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2186863199624871744, guid: fed78c13a938f034490695dc378a0c33, type: 3}
+  m_PrefabInstance: {fileID: 1956473407888831515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789ebf3d6dea4d14ab4fbff6cf85c540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &324230731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugarButton: {fileID: 700877207}
   sortirButton: {fileID: 0}
+  levelLoader: {fileID: 252042899}
 --- !u!1 &1882339928
 GameObject:
   m_ObjectHideFlags: 0

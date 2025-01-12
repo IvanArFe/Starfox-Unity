@@ -7,11 +7,13 @@ public class LevelLoader : MonoBehaviour
 {
     
     public Animator transition;
+    public Kills kills;
 
     // Update is called once per frame
     void Update()
     {
-        if (false)
+        
+        if (kills.getKills() == 20 || kills.getKills() == 50)
         {
             LoadNextLevel();
         }

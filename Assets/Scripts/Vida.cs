@@ -14,7 +14,7 @@ public class Vida : MonoBehaviour
 
     public Image BarraVida;   // Referencia a la barra de vida (UI)
     public Image VidasImage;  // Referencia a la imagen de vidas en el HUD
-
+    public Kills kills;
     // Imágenes para cada estado de vidas
     public Sprite Vidas3Sprite;
     public Sprite Vidas2Sprite;
@@ -37,15 +37,22 @@ public class Vida : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        // Actualizar la barra de vida
+        // Update the health bar
         if (BarraVida != null)
             BarraVida.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth == 0)
         {
             LoseLife();
+
+            // Check the tag of the object
+            if (CompareTag("Enemy"))
+            {
+                kills.killed();
+            }
         }
     }
+
 
     void LoseLife()
     {
