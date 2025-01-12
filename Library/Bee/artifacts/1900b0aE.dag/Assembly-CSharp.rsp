@@ -377,7 +377,10 @@
 "Assets/Scripts/cambioFondoEstrellas.cs"
 "Assets/Scripts/controller.cs"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/GameOverTransition.cs"
 "Assets/Scripts/Gun.cs"
+"Assets/Scripts/HealthPowerUp.cs"
+"Assets/Scripts/HealthPowerUpSpawner.cs"
 "Assets/Scripts/menuInicial.cs"
 "Assets/Scripts/menuNave.cs"
 "Assets/Scripts/Pain.cs"
@@ -417,6 +420,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/Vida1.cs"
 -langversion:9.0
 /deterministic
 /optimize+

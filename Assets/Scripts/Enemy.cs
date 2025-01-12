@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float enemyRange = 13f;
+    [SerializeField] float enemyRange = 70f;
     [SerializeField] float enemyRotationSpeed = 5f;
 
     private Transform playerTransform;  
