@@ -365,7 +365,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 25
+  totalLives: 3
   BarraVida: {fileID: 0}
+  VidasImage: {fileID: 0}
+  Vidas3Sprite: {fileID: 0}
+  Vidas2Sprite: {fileID: 0}
+  Vidas1Sprite: {fileID: 0}
 --- !u!1 &472624589
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +789,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  totalLives: 3
   BarraVida: {fileID: 4446440411274888495}
+  VidasImage: {fileID: 4653400296438180493}
+  Vidas3Sprite: {fileID: 21300000, guid: 77aacb3975c7d02429d8d65f65dd4d71, type: 3}
+  Vidas2Sprite: {fileID: 21300000, guid: 6aaf8954559882841b31949632aaa5a3, type: 3}
+  Vidas1Sprite: {fileID: 21300000, guid: bf259d489e71b0c43ac4a2440ca6eec7, type: 3}
 --- !u!114 &1446677377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2453,7 +2463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346.2, y: 213.55}
+  m_AnchoredPosition: {x: -346.2, y: 200.2}
   m_SizeDelta: {x: 61.396, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9110234500985068302
