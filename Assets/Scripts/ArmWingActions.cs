@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArmWingActions : MonoBehaviour
 {
-    
+    public Image BarraBooster;
+
     [SerializeField]
     GameObject projectilePrefab;
 
@@ -49,6 +51,7 @@ public class ArmWingActions : MonoBehaviour
                 isBoostingTransition = true; // Start the boost transition
             }
         }
+        BarraBooster.fillAmount = boostAmmount / 100f; //per a que sorti la barra del HUD
         cooldownCtr++;
         
         // Trigger shooting
