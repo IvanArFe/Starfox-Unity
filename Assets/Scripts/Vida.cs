@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
@@ -85,6 +86,6 @@ public class Vida : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over!");
-        Time.timeScale = 0; // Pausar el juego
+        SceneManager.LoadScene("gameOver");
     }
 }
