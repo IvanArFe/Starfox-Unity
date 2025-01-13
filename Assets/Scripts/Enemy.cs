@@ -6,9 +6,9 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float enemyRange = 150f;
     [SerializeField] float enemyRotationSpeed = 5f;
-    [SerializeField] GameObject deathEffect; // añadimos el efecto de desintegracion al morir
+    [SerializeField] GameObject deathEffect; // aÃ±adimos el efecto de desintegracion al morir
     private Renderer enemyRenderer;
-    private float fadeDuration = 2f; // Duración del fade-out efecto
+    private float fadeDuration = 2f; // DuraciÃ³n del fade-out efecto
 
     private Transform playerTransform;
     private Gun currentGun;
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         enemyRenderer = GetComponent<Renderer>();
         if (enemyRenderer == null)
         {
-            Debug.LogError("No se encontró un Renderer en el enemigo. Asegúrate de que el enemigo tiene un Renderer asignado.");
+            Debug.LogError("No se encontrÃ³ un Renderer en el enemigo. AsegÃºrate de que el enemigo tiene un Renderer asignado.");
         }
     }
 
@@ -96,7 +96,7 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
 
-        // Destruir el enemigo después del fade-out
+        // Destruir el enemigo despues del fade-out
         Destroy(gameObject);
     }
 }
