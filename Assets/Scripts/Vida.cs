@@ -6,7 +6,7 @@ public class Vida : MonoBehaviour
 {
     [SerializeField]
     float maxHealth = 100.0f; // Salud máxima
-    float currentHealth;      // Salud actual
+    public float currentHealth;      // Salud actual
 
     [SerializeField]
     int totalLives = 3;       // Número total de vidas
@@ -19,6 +19,8 @@ public class Vida : MonoBehaviour
     public Sprite Vidas3Sprite;
     public Sprite Vidas2Sprite;
     public Sprite Vidas1Sprite;
+
+    public Kills kills;
 
     void Start()
     {
@@ -44,6 +46,11 @@ public class Vida : MonoBehaviour
         if (currentHealth == 0)
         {
             LoseLife();
+            // Check the tag of the object
+            if (CompareTag("Enemy"))
+            {
+                kills.killed();
+            }
         }
     }
 

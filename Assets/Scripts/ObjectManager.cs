@@ -21,7 +21,12 @@ public class ObjectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Check if interval has changed
+        if(Mathf.Abs(previousSpawnInt -spawnInt) > Mathf.Epsilon)
+        {
+            previousSpawnInt = spawnInt;
+            RestartGeneration();
+        }
     }
 
     void StartGeneration()
@@ -31,6 +36,11 @@ public class ObjectManager : MonoBehaviour
     }
 
     void RestartGeneration()
+    {
+        // Stop current cycle a start new one with different spawn interval
+        CancelInvoke(nameof(SpawnObject));
+        StartGeneration();
+    }
 
     void SpawnObject()
     {   

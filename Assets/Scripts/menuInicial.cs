@@ -6,6 +6,7 @@ public class menuInicial : MonoBehaviour
 {
     public Button jugarButton; // Referencia al botón Jugar
     public Button sortirButton; // Referencia al botón Sortir
+    public LevelLoader levelLoader;
 
     void Update()
     {
@@ -27,7 +28,7 @@ public class menuInicial : MonoBehaviour
     public void Jugar()
     {
         Debug.Log("Botón Jugar activado");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadNextLevel();
     }
 
     public void Sortir()
