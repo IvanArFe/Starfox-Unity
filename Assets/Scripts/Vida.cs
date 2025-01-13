@@ -46,11 +46,6 @@ public class Vida : MonoBehaviour
         if (currentHealth == 0)
         {
             LoseLife();
-            // Check the tag of the object
-            if (CompareTag("Enemy"))
-            {
-                kills.killed();
-            }
         }
     }
 
@@ -79,8 +74,16 @@ public class Vida : MonoBehaviour
         }
         else
         {
-            // Cuando se terminan todas las vidas
-            GameOver();
+            // Si este objeto es el jugador, activamos el Game Over
+            if (gameObject.CompareTag("Player"))
+            {
+                GameOver();
+            }
+            else
+            {
+                // Si es el enemigo, simplemente lo destruimos
+                Destroy(gameObject);
+            }
         }
 
         UpdateHUD();
