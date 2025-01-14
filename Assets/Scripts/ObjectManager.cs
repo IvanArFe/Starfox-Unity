@@ -1,11 +1,19 @@
 using UnityEngine;
 
+[System.Serializable]
+public class SpawnableObject
+{
+    public GameObject prefab; // Prefab to be generated
+    public bool useFixedHeight = false; // Fixed height?
+    public float fixedHeight = 0f; // Value in case we use it
+    public float spawnInterval = 1f; // Spawn interval for specific models
+    public float speed = 10f; // Specific speed fro every model
+}
+
 public class ObjectManager : MonoBehaviour
 {
-    public GameObject objectPrefab; // Prefab of generated object
-    public float spawnInt = 0.5f; // Time between creations
+    public SpawnableObject[] spawnableObjects; // Prefab of generated object
     public Vector3 spawnRange = new Vector3(10f, 5f, 20f); // Generation range
-    public float speed = 10f; // Object speed
     public float baseY = 15f;
 
     private float previousSpawnInt;
@@ -13,49 +21,41 @@ public class ObjectManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Generation cicle
-        previousSpawnInt = spawnInt;
-        StartGeneration();
+        // Generation cicle independent for every object
+        foreach (var spawnable in spawnableObjects)
+        {
+            StartCoroutine(SpawnRoutine(spawnable));
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Check if interval has changed
-        if(Mathf.Abs(previousSpawnInt -spawnInt) > Mathf.Epsilon)
+       
+    }
+
+    private System.Collections.IEnumerator SpawnRoutine(SpawnableObject spawnable)
+    {
+        while (true)
         {
-            previousSpawnInt = spawnInt;
-            RestartGeneration();
+            yield return new WaitForSeconds(spawnable.spawnInterval);
+
+            // Calculate pos Y
+            float posY = spawnable.useFixedHeight ? spawnable.fixedHeight : baseY + Random.Range(0, spawnRange.y);
+
+            // Generate random position
+            Vector3 spawnPosition = new Vector3(
+                Random.Range(-spawnRange.x, spawnRange.x),
+                posY,
+                spawnRange.z
+            );
+
+            // Create object in generated position
+            GameObject newObject = Instantiate(spawnable.prefab, spawnPosition, spawnable.prefab.transform.rotation);
+
+            // Add movement component
+            ObjectMovement movement = newObject.AddComponent<ObjectMovement>();
+            movement.speed = spawnable.speed;
         }
-    }
-
-    void StartGeneration()
-    {
-        // Start the generation cycle
-        InvokeRepeating(nameof(SpawnObject), 0f, spawnInt);
-    }
-
-    void RestartGeneration()
-    {
-        // Stop current cycle a start new one with different spawn interval
-        CancelInvoke(nameof(SpawnObject));
-        StartGeneration();
-    }
-
-    void SpawnObject()
-    {   
-        // Generate random position
-        Vector3 spawnPosition = new Vector3(
-            Random.Range(-spawnRange.x, spawnRange.x),
-            baseY + Random.Range(0, spawnRange.y),
-            spawnRange.z
-        );
-
-        // Create object in generated position
-        GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.identity);
-
-        // Add movement component
-        ObjectMovement movement = newObject.AddComponent<ObjectMovement>();
-        movement.speed = speed;
     }
 }

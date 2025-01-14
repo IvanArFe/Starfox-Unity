@@ -1,21 +1,24 @@
 using UnityEngine;
-using System.Collections;
-//video de https://www.youtube.com/watch?v=aPMBoqcRSyY
+
 public class moveStars : MonoBehaviour
 {
+    public float minSpeed = -10f; // Velocidad mínima
+    public float maxSpeed = -30f; // Velocidad máxima
     private float zMovement;
-    private float timeDestroy = 0.0f;
 
-    public void Start(){
-        zMovement = Random.Range(-5,-20) * Time.deltaTime;
+    private void Start()
+    {
+        zMovement = Random.Range(minSpeed, maxSpeed) * Time.deltaTime;
     }
 
-    public void Update(){
-       gameObject.transform.Translate(0,0,zMovement);
-        timeDestroy += Time.deltaTime;
-        if(timeDestroy > 5) {
-            Destroy(this.gameObject);
-        }
+    private void Update()
+    {
+        transform.Translate(0, 0, zMovement);
     }
 
+    // Método para destruir la estrella (llámalo al final de la partida)
+    public void DestroyStar()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -8,10 +8,10 @@ public class ObjectMovement : MonoBehaviour
     void Update()
     {
         // Movement towards camera
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+        transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
 
         // When the object reaches an specific coord, delete it
-        if(transform.position.z < -10f)
+        if(transform.position.z < -18f)
         {
             Destroy(gameObject);
         }

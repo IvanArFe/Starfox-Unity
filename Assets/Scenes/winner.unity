@@ -620,9 +620,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9171692135621437675, guid: 6acde3916a82e434dbca1ec2e334486c, type: 3}
+      propertyPath: yMax
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171692135621437675, guid: 6acde3916a82e434dbca1ec2e334486c, type: 3}
+      propertyPath: yMin
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171692135621437675, guid: 6acde3916a82e434dbca1ec2e334486c, type: 3}
       propertyPath: stars
       value: 
       objectReference: {fileID: 370802061}
+    - target: {fileID: 9171692135621437675, guid: 6acde3916a82e434dbca1ec2e334486c, type: 3}
+      propertyPath: spawnInterval
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
