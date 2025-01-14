@@ -3,7 +3,12 @@ using UnityEngine;
 public class Kills : MonoBehaviour
 {
     [SerializeField]
-    private int kills = 0;
+    public int kills = 0;
+
+    public void initialize()
+    {
+        kills = 0;
+    }
 
     public void killed()
     { 

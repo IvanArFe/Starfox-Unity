@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: b19f47c2f5b46bd41ad2e8f6c9570ee4, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 3b7a27dc6b672c84288bcc3d16efacef, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -501,22 +501,22 @@ MonoBehaviour:
     useFixedHeight: 0
     fixedHeight: 0
     spawnInterval: 7
-    speed: 30
+    speed: 40
   - prefab: {fileID: 6643274426539040999, guid: d5d4476998e3b5945a9ed0e4df71d637, type: 3}
     useFixedHeight: 0
     fixedHeight: 0
     spawnInterval: 0.5
-    speed: 40
+    speed: 50
   - prefab: {fileID: 4324721811761972154, guid: bd8478974f68dec4b9f13d92e4204d13, type: 3}
     useFixedHeight: 0
     fixedHeight: 0
     spawnInterval: 5
-    speed: 30
+    speed: 40
   - prefab: {fileID: 6793256129310674827, guid: 8ac2e7526986d9f4b94f2c86c1b2986d, type: 3}
     useFixedHeight: 0
     fixedHeight: 0
-    spawnInterval: 3
-    speed: 15
+    spawnInterval: 2
+    speed: 22
   spawnRange: {x: 60, y: 15, z: 90}
   baseY: 5
 --- !u!4 &671886414

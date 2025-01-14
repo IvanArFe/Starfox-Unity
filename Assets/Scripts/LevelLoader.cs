@@ -9,6 +9,10 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public Kills kills;
 
+    void Start() {
+        kills.initialize();   
+    }
+
     // Update is called once per frame
     void Update()
     {
