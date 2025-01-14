@@ -7,12 +7,16 @@ public class Kills : MonoBehaviour
 
 
     public void killed()
-    {
+    { 
+        Debug.Log("number of kills");
+        Debug.Log(kills);
         kills++;
     }
 
     public int getKills()
     {
+        Debug.Log("get kills");
+        Debug.Log(kills);
         return kills;
     }
 }
