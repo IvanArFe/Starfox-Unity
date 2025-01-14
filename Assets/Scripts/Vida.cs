@@ -81,7 +81,7 @@ public class Vida : MonoBehaviour
             }
             else
             {
-                // Si es el enemigo, simplemente lo destruimos
+                kills.killed();
                 Destroy(gameObject);
             }
         }
