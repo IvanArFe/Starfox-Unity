@@ -49,7 +49,7 @@ public class ArmWingActions : MonoBehaviour
     {
         // Initialize the target position to the current position
         targetZPosition = transform.position.z;
-        enemyPosition = FindFirstObjectByType<Enemy>().transform;
+        //enemyPosition = FindFirstObjectByType<Enemy>().transform;
     }
 
     // Update is called once per frame

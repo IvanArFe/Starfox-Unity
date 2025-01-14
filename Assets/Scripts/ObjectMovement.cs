@@ -11,7 +11,7 @@ public class ObjectMovement : MonoBehaviour
         transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
 
         // When the object reaches an specific coord, delete it
-        if(transform.position.z < -18f)
+        if(transform.position.z < -15f)
         {
             Destroy(gameObject);
         }

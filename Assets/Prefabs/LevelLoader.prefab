@@ -65,17 +65,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LOADING...
+  m_text: LOADING NEXT LEVEL...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5760504782130699405}
   - component: {fileID: 882272834103156047}
-  - component: {fileID: 1397064630225259188}
+  - component: {fileID: 3871053062984296671}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -178,7 +178,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6691277269970664722}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c33b1a8443d9f5c40bd75a2df458cbaa, type: 2}
   m_CullingMode: 0
@@ -192,7 +192,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1397064630225259188
+--- !u!114 &3871053062984296671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,10 +201,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6691277269970664722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0058484d9e5005245b07b4625f4b9ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f6db2aed16df644fa1d4a906c246cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 3581192720168467632}
+  kills: {fileID: -4734929985629341062, guid: eb65e234c083d73429f5c6512d00ecd4, type: 3}
 --- !u!1 &7720449142618307545
 GameObject:
   m_ObjectHideFlags: 0

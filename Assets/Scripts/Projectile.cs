@@ -10,7 +10,17 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         // Asignar la capa de "Projectile"
-        gameObject.layer = LayerMask.NameToLayer("Projectile");
+        int layer;
+        layer = LayerMask.NameToLayer("Projectile");
+
+        if(layer == -1)
+        {
+            //Debug.LogError("Resultado -1 en capa");
+        } 
+        else
+        {
+            gameObject.layer = layer;
+        }
 
         rb = GetComponent<Rigidbody>();
         Impulse();

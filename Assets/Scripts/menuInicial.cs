@@ -13,21 +13,21 @@ public class menuInicial : MonoBehaviour
         // Si se presiona la tecla Espacio, activa el botón Jugar
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Tecla Espacio presionada");
+            Debug.LogError("Tecla Espacio presionada");
             Jugar();
         }
 
         // Si se presiona la tecla Escape, activa el botón Sortir
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Tecla Escape presionada");
+            Debug.LogError("Tecla Escape presionada");
             Sortir();
         }
     }
 
     public void Jugar()
     {
-        Debug.Log("Botón Jugar activado");
+        Debug.LogError("Botón Jugar activado");
         levelLoader.LoadNextLevel();
     }
 

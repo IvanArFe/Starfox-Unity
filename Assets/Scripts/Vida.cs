@@ -9,8 +9,8 @@ public class Vida : MonoBehaviour
     public float currentHealth;      // Salud actual
 
     [SerializeField]
-    int totalLives = 3;       // Número total de vidas
-    int currentLives;         // Vidas actuales
+    public int totalLives = 3;       // Número total de vidas
+    public int currentLives;         // Vidas actuales
 
     public Image BarraVida;   // Referencia a la barra de vida (UI)
     public Image VidasImage;  // Referencia a la imagen de vidas en el HUD
@@ -36,6 +36,7 @@ public class Vida : MonoBehaviour
 
     public void DoDamage(float amount)
     {
+        Debug.LogError("Do damage si");
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
@@ -43,8 +44,9 @@ public class Vida : MonoBehaviour
         if (BarraVida != null)
             BarraVida.fillAmount = currentHealth / maxHealth;
 
-        if (currentHealth == 0)
+        if (currentHealth < 1)
         {
+            Debug.LogError("Lose Life");
             LoseLife();
         }
     }
@@ -81,6 +83,10 @@ public class Vida : MonoBehaviour
             }
             else
             {
+                if (gameObject.CompareTag("Winton"))
+                {
+                    kills.setKills();
+                }
                 kills.killed();
                 Destroy(gameObject);
             }
